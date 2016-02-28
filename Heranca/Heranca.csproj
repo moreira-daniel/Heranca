@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD66A0BE-BC12-463E-BEB7-FC3596AF1806}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Heranca</RootNamespace>
+    <AssemblyName>Heranca</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\Entities\Cidades\Cidade.cs" />
+    <Compile Include="Domain\Entities\Cidades\ICidade.cs" />
+    <Compile Include="Domain\Entities\Fornecedores\Fornecedor.cs" />
+    <Compile Include="Domain\Entities\Fornecedores\IFornecedor.cs" />
+    <Compile Include="Domain\Entities\PessoasFisicas\IPessoaFisica.cs" />
+    <Compile Include="Domain\Entities\PessoasJuridicas\IPessoaJuridica.cs" />
+    <Compile Include="Domain\Entities\Ufs\IUf.cs" />
+    <Compile Include="Domain\Entities\Ufs\Uf.cs" />
+    <Compile Include="Domain\Interfaces\IPessoa.cs" />
+    <Compile Include="Domain\Entities\PessoasFisicas\PessoaFisica.cs" />
+    <Compile Include="Domain\Entities\PessoasJuridicas\PessoaJuridica.cs" />
+    <Compile Include="Domain\ValueObjects\Ceps\Cep.cs" />
+    <Compile Include="Domain\ValueObjects\Ceps\ICep.cs" />
+    <Compile Include="Domain\ValueObjects\Cnpjs\Cnpj.cs" />
+    <Compile Include="Domain\ValueObjects\Cnpjs\ICnpj.cs" />
+    <Compile Include="Domain\ValueObjects\Cpfs\Cpf.cs" />
+    <Compile Include="Domain\ValueObjects\Cpfs\ICpf.cs" />
+    <Compile Include="Domain\ValueObjects\Emails\Email.cs" />
+    <Compile Include="Domain\ValueObjects\Emails\IEmail.cs" />
+    <Compile Include="Domain\ValueObjects\Enderecos\Endereco.cs" />
+    <Compile Include="Domain\ValueObjects\Enderecos\IEndereco.cs" />
+    <Compile Include="Domain\ValueObjects\Telefones\ITelefone.cs" />
+    <Compile Include="Domain\ValueObjects\Telefones\Telefone.cs" />
+    <Compile Include="Helper\Entity.cs" />
+    <Compile Include="Helper\Guard.cs" />
+    <Compile Include="Helper\TextHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\CarbonConstants.cs" />
+    <Compile Include="Resources\MainResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainResource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MainResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
