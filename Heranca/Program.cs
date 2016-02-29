@@ -22,13 +22,13 @@ namespace Heranca
 
         private static Endereco CriarEnderecoFake()
         {
-            var bairro = "Bairro";
+            const string bairro = "Bairro";
             var cep = new Cep("30000000");
             var uf = new Uf("Minas Gerais", "MG");
             var cidade = new Cidade("Belo Horizonte", uf);
             var complemento = string.Empty;
-            var logradouro = "Avenida Brasil";
-            var numero = "50A";
+            const string logradouro = "Avenida Brasil";
+            const string numero = "50A";
 
             return new Endereco(logradouro, complemento, numero, bairro, cidade, uf, cep);
         }
@@ -48,7 +48,7 @@ namespace Heranca
             var cpf = new Cpf("257.053.492-70");
             var email = CriarEmailFake();
             var endereco = CriarEnderecoFake();
-            var nome = "Daniel Moreira";
+            const string nome = "Daniel Moreira";
             var telefone = CriarTelefoneFake();
 
             var pessoaFisica = new PessoaFisica(cpf, email, endereco, nome, telefone);
@@ -61,8 +61,8 @@ namespace Heranca
             var cnpj = new Cnpj("37.274.381/0001-07");
             var email = CriarEmailFake();
             var endereco = CriarEnderecoFake();
-            var inscEstadual = "16515165135135";
-            var razaoSocial = "Microsoft Corp";
+            const string inscEstadual = "16515165135135";
+            const string razaoSocial = "Microsoft Corp";
             var telefone = CriarTelefoneFake();
 
             var pessoaJuridica = new PessoaJuridica(cnpj, email, endereco, inscEstadual, razaoSocial, telefone);
